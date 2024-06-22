@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+sudo apt-get update -y
+sudo apt-get install -y curl git ansible-core
+ansible-playbook playbook.yml --ask-vault-pass
