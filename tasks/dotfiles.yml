@@ -8,7 +8,7 @@
 - name: neovim config
   ansible.builtin.git:
     repo: 'git@github.com:mat2cc/dotfiles.git'
-    dest: "{{ lookup('env', 'HOME') }}/.config/nvim"
+    dest: "{{ lookup('env', 'HOME') }}/.dotfiles"
     update: yes
     accept_hostkey: yes
     version: master
