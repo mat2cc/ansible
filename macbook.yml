@@ -1,0 +1,13 @@
+- name: Matt's Playbook
+  hosts: localhost
+  vars:
+    source_key: "./.ssh/id_ed25519"
+    dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_ed25519"
+    dev: "{{ lookup('env', 'HOME') }}/dev"
+    config: "{{ lookup('env', 'HOME') }}/.config"
+  tasks:
+    - include_tasks: mactasks/ssh.yml
+    - include_tasks: mactasks/git.yml
+    - include_tasks: mactasks/core.yml
+    - include_tasks: mactasks/dotfiles.yml
+    - include_tasks: mactasks/fish.yml

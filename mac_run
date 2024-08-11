@@ -1,0 +1,2 @@
+xcode-select --install
+ansible-playbook macbook.yml --ask-vault-pass

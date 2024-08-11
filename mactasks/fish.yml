@@ -1,0 +1,17 @@
+- name: set fish as default shell
+  shell: sudo chsh -s /bin/fish mattc
+
+- name: install fisher
+  shell: curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+  args:
+    executable: /bin/fish
+
+- name: install nvm
+  shell: fisher install jorgebucaran/nvm.fish
+  args:
+    executable: /bin/fish
+
+- name: nvm install latest
+  shell: nvm install latest
+  args: 
+    executable: /bin/fish
